@@ -13,9 +13,14 @@ header {
 }
 
 header h1 {
-  color: white;
   margin: 0px 5%;
   width: 90%;
+}
+
+header h1 a,
+header h1 a:visited {
+  color: white;
+  text-decoration: none;
 }
 
 ul {
