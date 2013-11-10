@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background: url("header-bg-long.jpg") #333;
+  background: url("header-bg-long.jpg") rgb(40,35,35);
   box-shadow: 0 1px 2px #333333;
   border-bottom: 1px solid #222;
   margin: auto;
@@ -26,6 +26,7 @@ header h1 a:visited {
 #installLink {
   float: right;
   margin-top: 8px;
+  cursor: pointer;
 }
 
 ul {
