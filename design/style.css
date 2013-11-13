@@ -38,16 +38,37 @@ li {
   margin: 12px 5%;
 }
 
-li > * {
+#newHandle li > *,
+#previousHandles a {
   height: 3.8rem;
   width: 100%;
   font-weight: 500;
 }
 
-input, button {
+input, button, #previousHandles a {
   padding: 0px;
-  padding-left: 0.3rem;
+  padding-left: 0.5rem;
   font-size: 1.4rem;
+}
+
+#previousHandles li {
+  background-color: white;
+  height: 3.8rem;
+  border: solid green 1px;
+}
+
+#previousHandles a,
+#previousHandles a:hover {
+  display: block;
+  padding-top: 1.0rem;
+  color: black;
+  text-decoration: none;
+}
+
+.deleteHandle {
+  float: right;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 button {
