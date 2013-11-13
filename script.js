@@ -1,7 +1,8 @@
 
 document.getElementById('submitButton').addEventListener('click', redirect, false);
 
-function redirect() {
+function redirect(e) {
+  e.preventDefault();
   var handle = document.getElementById('podurl').value;
   var handleregexp = new RegExp(/[A-Za-z0-9_]+@(([a-zA-Z0-9\-]*)\.)+([A-Za-z0-9\-]{2,})/);
   
