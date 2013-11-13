@@ -5,15 +5,27 @@ function init() {
   
   if (window.localStorage.length > 0) {
     var list = document.getElementById("previousHandles");
+    
     for (var i = 0; i < window.localStorage.length; i++) {
       var handle = window.localStorage.key(i);
       var li = document.createElement('li');
-      var a = document.createElement('a');
+      var linkToPod = document.createElement('a');
+      var removeIcon = document.createElement('img');
+      var removeString = "Remove this handle";
       
-      a.setAttribute('href', getUrl(handle));
-      a.setAttribute('title', 'Go to my pod!');
-      a.appendChild(document.createTextNode(handle));
-      li.appendChild(a);
+      linkToPod.setAttribute('href', getUrl(handle));
+      linkToPod.setAttribute('title', 'Go to my pod!');
+      linkToPod.appendChild(document.createTextNode(handle));
+      
+      removeIcon.setAttribute('src', './design/monotone_close_exit_delete.png');
+      removeIcon.setAttribute('alt', removeString);
+      removeIcon.setAttribute('title', removeString);
+      removeIcon.setAttribute('class', 'deleteHandle');
+      removeIcon.setAttribute('data-handle', handle);
+      removeIcon.addEventListener('click', deleteHandle, false);
+      
+      li.appendChild(removeIcon);
+      li.appendChild(linkToPod);
       list.appendChild(li);
     }
   }
@@ -29,7 +41,9 @@ function submit(e) {
     error_message.className = '';
     error_message.textContent = '"' + handle + '" is not a correct handle!';
   } else {
+    // Store the handle in the localStorage
     window.localStorage.setItem(handle, "");
+    // Redirect to the pod
     window.location = getUrl(handle);
   }
 }
@@ -37,4 +51,15 @@ function submit(e) {
 function getUrl(handle) {
     var splitted = handle.split('@');
     return 'https://' + splitted[1] + '/users/sign_in?user[username]=' + splitted[0];
+}
+
+function deleteHandle(event) {
+  var img = event.target;
+  var listElem = img.parentNode;
+  
+  // Remove the handle in the localStorage
+  window.localStorage.removeItem(img.dataset.handle);
+  // Remove the element from the list
+  listElem.parentNode.removeChild(listElem);
+  listElem = null;
 }
