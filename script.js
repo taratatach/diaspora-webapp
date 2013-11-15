@@ -1,7 +1,7 @@
 window.addEventListener("load", init, false);
 
 function init() {
-  document.getElementById('submitButton').addEventListener('click', submit, false);
+  document.getElementById('login-form').addEventListener('submit', submit, false);
   
   if (window.localStorage.length > 0) {
     var list = document.getElementById("previousHandles");
