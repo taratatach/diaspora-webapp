@@ -38,36 +38,37 @@ li {
   margin: 12px 5%;
 }
 
-#newHandle li > *,
-#previousHandles a {
+#newHandle li > * {
   height: 3.8rem;
   width: 100%;
   font-weight: 500;
 }
 
-input, button, #previousHandles a {
+input, button {
   padding: 0px;
   padding-left: 0.5rem;
   font-size: 1.4rem;
+  -moz-box-sizing: border-box;
 }
 
 #previousHandles li {
   background-color: white;
-  height: 3.8rem;
+  height: 3.0rem;
   border: solid green 1px;
 }
 
-#previousHandles a,
-#previousHandles a:hover {
+#previousHandles a {
   display: block;
-  padding-top: 1.0rem;
+  padding: 0px;
+  padding-left: 0.5rem;
   color: black;
   text-decoration: none;
+  font: italic 0.9rem/3.4 sans-serif;
 }
 
 .deleteHandle {
   float: right;
-  padding: 1rem;
+  padding: 0.9rem;
   cursor: pointer;
 }
 
