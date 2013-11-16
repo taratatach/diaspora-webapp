@@ -58,17 +58,32 @@ input, button {
 }
 
 #previousHandles a {
+  width: 15rem;
+  position: relative;
   display: block;
   padding: 0px;
   padding-left: 0.5rem;
   color: black;
   text-decoration: none;
-  font: italic 0.9rem/3.4 sans-serif;
+  font: italic 1.2rem/2.6 sans-serif;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+#previousHandles a:after {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  bottom: 2px;
+  width: 4rem;
+  background: -moz-linear-gradient(left center, rgba(255, 255, 255, 0), rgba(255,255,255,1));
+  content: "";
 }
 
 .deleteHandle {
   float: right;
-  padding: 0.9rem;
+  padding: 0.9rem 0.5rem;
   cursor: pointer;
 }
 
