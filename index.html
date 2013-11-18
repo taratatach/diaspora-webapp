@@ -17,15 +17,20 @@
         <a href="https://diasporafoundation.org">diaspora*</a>
       </h1>
     </header>
-    <ul id="previousHandles"></ul>
-    <form id="login-form">
-      <ul id="newHandle">
-        <li><label id="podurl-label" for="podurl">Please enter your diaspora* handle</label></li>
-        <li><input id="podurl" name="podurl" type="text" placeholder="username@yourpod.tld" /></li>
-        <li id="error" class="hidden"></li>
-        <li><button id="submitButton" type="submit">Go to my pod!</button></li>
-      </ul>
-    </form>
+    
+    <section id="content">
+      <div id="previousHandles"></div>
+      
+      <form id="login-form">
+        <ul id="newHandle">
+          <li><label id="podurl-label" for="podurl">Please enter your diaspora* handle:</label></li>
+          <li><input id="podurl" name="podurl" type="text" placeholder="username@yourpod.tld" /></li>
+          <li id="error" class="hidden"></li>
+          <li><button id="submitButton" type="submit">Go to my pod!</button></li>
+        </ul>
+      </form>
+    </section>
+    
     <footer>
       <p><a href="https://wiki.diasporafoundation.org/Choosing_a_pod">I have no pod at the moment!</a></p>
     </footer>

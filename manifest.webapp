@@ -23,6 +23,6 @@
             "description": "Applicazione OpenWeb per il social network diaspora*"
         }
     },
-    "chrome": { "navigation": true​ },
+    "chrome": { "navigation": true },
     "default_locale": "en"
 }

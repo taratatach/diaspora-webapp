@@ -23,6 +23,10 @@ header h1 a:visited {
   text-decoration: none;
 }
 
+#content {
+  margin: 0px 5%;
+}
+
 #installLink {
   float: right;
   margin-top: 8px;
@@ -35,7 +39,7 @@ ul {
 }
 
 li {
-  margin: 12px 5%;
+  margin-bottom: 12px;
 }
 
 #newHandle li > * {
