@@ -4,14 +4,20 @@ function init() {
   document.getElementById('login-form').addEventListener('submit', submit, false);
   
   if (window.localStorage.length > 0) {
-    var list = document.getElementById("previousHandles");
+    var list = document.getElementById('previousHandles');
+    var formLabel = document.getElementById('podurl-label');
+    
+    // Modify indications
+    var existingHandlesLabel = document.createElement('p');
+    existingHandlesLabel.appendChild(document.createTextNode('Please select one of your handles:'));
+    list.
     
     for (var i = 0; i < window.localStorage.length; i++) {
       var handle = window.localStorage.key(i);
       var li = document.createElement('li');
       var linkToPod = document.createElement('a');
       var removeIcon = document.createElement('img');
-      var removeString = "Remove this handle";
+      var removeString = 'Remove this handle';
       
       linkToPod.setAttribute('href', getUrl(handle));
       linkToPod.setAttribute('title', 'Go to my pod!');
