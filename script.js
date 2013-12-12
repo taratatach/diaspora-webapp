@@ -8,7 +8,7 @@ function init() {
     
     // Modify indications
     var existingHandlesLabel = document.createElement('p');
-    existingHandlesLabel.setAttribute('id', 'existing-handles-label');
+    existingHandlesLabel.id = 'existing-handles-label';
     existingHandlesLabel.appendChild(document.createTextNode('Please select one of your handles:'));
     div.appendChild(existingHandlesLabel);
     
