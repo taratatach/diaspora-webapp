@@ -16,11 +16,17 @@
     },
     "installs_allowed_from": ["*"],
     "locales": {
+        "en": {
+            "description": "OpenWeb Application for the diaspora* social network"
+        },
         "fr": {
             "description": "Application web ouverte pour le réseau social diaspora*"
         },
         "it": {
             "description": "Applicazione OpenWeb per il social network diaspora*"
+        },
+        "de": {
+            "description": "Offene Web Anwendung für das Soziale Netzwerk diaspora*"
         }
     },
     "chrome": { "navigation": true },
