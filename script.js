@@ -9,7 +9,7 @@ function init() {
     // Modify indications
     var existingHandlesLabel = document.createElement('p');
     existingHandlesLabel.id = 'existing-handles-label';
-    existingHandlesLabel.appendChild(document.createTextNode('Please select one of your handles:'));
+    existingHandlesLabel.appendChild(document.createTextNode('Please select one of your diaspora* ID:'));
     div.appendChild(existingHandlesLabel);
     
     document.getElementById('podurl-label').textContent = 'Or enter a new one below:';
@@ -21,7 +21,7 @@ function init() {
       var li = document.createElement('li');
       var linkToPod = document.createElement('a');
       var removeIcon = document.createElement('img');
-      var removeString = 'Remove this handle';
+      var removeString = 'Remove this diaspora* ID';
       
       linkToPod.setAttribute('href', getUrl(handle));
       linkToPod.setAttribute('title', 'Go to my pod!');
@@ -50,7 +50,7 @@ function submit(e) {
   if (!handleregexp.test(handle)) {
     var error_message = document.getElementById('error');
     error_message.className = '';
-    error_message.textContent = '"' + handle + '" is not a correct handle!';
+    error_message.textContent = '"' + handle + '" is not a correct diaspora* ID!';
   } else {
     // Store the handle in the localStorage
     window.localStorage.setItem(handle, "");
@@ -78,6 +78,6 @@ function deleteHandle(event) {
     var existingHandlesLabel = document.getElementById('existing-handles-label');
     existingHandlesLabel.parentNode.removeChild(existingHandlesLabel);
     existingHandlesLabel = null;  
-    document.getElementById('podurl-label').textContent = 'Please enter your diaspora* handle:';
+    document.getElementById('podurl-label').textContent = 'Please enter your diaspora* ID:';
   }
 }
