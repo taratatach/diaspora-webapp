@@ -7,6 +7,9 @@
     <link rel="stylesheet" media="screen" type="text/css" title="design" href="design/style.css" />
     <link href="design/icon.png" rel="shortcut icon">
     <link href="design/icon.png" rel="apple-touch-icon">
+    <link rel="localization" href="locales/{locale}.properties" />
+    <link rel="manifest" href="./manifest.webapp" />
+    <script type="application/javascript" src="webL10n/l10n.js" charset="utf-8"></script>
   </head>
   <body>
     <header>
@@ -26,13 +29,13 @@
           <li><label id="podurl-label" for="podurl">Please enter your diaspora* ID:</label></li>
           <li><input id="podurl" name="podurl" type="email" placeholder="username@yourpod.tld" /></li>
           <li id="error" class="hidden"></li>
-          <li><button id="submitButton" type="submit">Go to my pod!</button></li>
+          <li><button data-l10n-id="go-to-pod" id="submitButton" type="submit">Go to my pod!</button></li>
         </ul>
       </form>
     </section>
     
     <footer>
-      <p><a href="https://wiki.diasporafoundation.org/Choosing_a_pod">Create an account</a></p>
+      <p><a data-l10n-id="create-account" href="https://wiki.diasporafoundation.org/Choosing_a_pod">Create an account</a></p>
     </footer>
     <script type="text/javascript" src="script.js"></script>
   </body>

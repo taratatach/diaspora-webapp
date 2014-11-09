@@ -1,4 +1,6 @@
-window.addEventListener("load", init, false);
+// start init function when localization is ready
+navigator.mozL10n.ready(init);
+//window.addEventListener("load", init, false);
 
 function init() {
   document.getElementById('login-form').addEventListener('submit', submit, false);
@@ -9,11 +11,10 @@ function init() {
     // Modify indications
     var existingHandlesLabel = document.createElement('p');
     existingHandlesLabel.id = 'existing-handles-label';
-    existingHandlesLabel.appendChild(document.createTextNode('Please select one of your diaspora* ID:'));
+    existingHandlesLabel.setAttribute('data-l10n-id', 'select-id');
     div.appendChild(existingHandlesLabel);
-    
-    document.getElementById('podurl-label').textContent = 'Or enter a new one below:';
-    
+    document.getElementById('podurl-label').setAttribute('data-l10n-id', 'enter-new-id');
+    document.getElementById('podurl').setAttribute('placeholder', navigator.mozL10n.get('example-id')); 
     // Add previous handles to a list
     var ul = document.createElement('ul');
     for (var i = 0; i < window.localStorage.length; i++) {
@@ -50,7 +51,8 @@ function submit(e) {
   if (!handleregexp.test(handle)) {
     var error_message = document.getElementById('error');
     error_message.className = '';
-    error_message.textContent = '"' + handle + '" is not a correct diaspora* ID!';
+    error_message.setAttribute('data-l10n-id', 'incorrect-id');
+    error_message.setAttribute('data-l10n-args', JSON.stringify({"id": handle}));
   } else {
     // Store the handle in the localStorage
     window.localStorage.setItem(handle, "");
@@ -78,6 +80,6 @@ function deleteHandle(event) {
     var existingHandlesLabel = document.getElementById('existing-handles-label');
     existingHandlesLabel.parentNode.removeChild(existingHandlesLabel);
     existingHandlesLabel = null;  
-    document.getElementById('podurl-label').textContent = 'Please enter your diaspora* ID:';
+    document.getElementById('podurl-label').setAttribute('data-l10n-id', 'podurl-select');
   }
 }
