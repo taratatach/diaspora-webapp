@@ -1,6 +1,5 @@
 // start init function when localization is ready
 navigator.mozL10n.ready(init);
-//window.addEventListener("load", init, false);
 
 function init() {
   document.getElementById('login-form').addEventListener('submit', submit, false);
