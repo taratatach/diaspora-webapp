@@ -2,13 +2,13 @@
     "version": "0.5",
     "name": "diaspora*",
     "description": "OpenWeb Application for the diaspora* social network",
-    "launch_path": "/index.html",
+    "launch_path": "/diaspora-webapp/index.html",
     "icons": {
-        "30": "/design/d-30.png",
-        "48": "/design/d-48.png",
-        "60": "/design/d-60.png",
-        "90": "/design/d-90.png",
-        "128": "/design/d-128.png"
+        "30": "/diaspora-webapp/design/d-30.png",
+        "48": "/diaspora-webapp/design/d-48.png",
+        "60": "/diaspora-webapp/design/d-60.png",
+        "90": "/diaspora-webapp/design/d-90.png",
+        "128": "/diaspora-webapp/design/d-128.png"
     },
     "developer": {
         "name": "Flaburgan",
@@ -36,7 +36,7 @@
 	    "filters": {
 		"type": [ "url" ]
 	    },
-	    "href": "/share.html",
+	    "href": "/diaspora-webapp/share.html",
 	    "disposition": "window",
 	    "returnValue": false
 	}

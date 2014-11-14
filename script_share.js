@@ -26,12 +26,11 @@ navigator.mozSetMessageHandler("activity", function(activity){
 		}
 		div.appendChild(ul);
 		}
-		else{
-			if (window.localStorage.length == 1){
+		else if (window.localStorage.length == 1){
 				//if only one account, share directly to it
 				var handle = window.localStorage.key(0);
 				window.location = getShareUrl(handle, urlToShare);
-			}
+		}
 			else{
 				// If no diaspora* account has been defined. 
 				//TODO: propose for configuration and continue
