@@ -1,6 +1,5 @@
 // start init function when localization is ready
 navigator.mozL10n.ready(init);
-//window.addEventListener("load", init, false);
 
 function init() {
   document.getElementById('login-form').addEventListener('submit', submit, false);
@@ -14,7 +13,6 @@ function init() {
     existingHandlesLabel.setAttribute('data-l10n-id', 'select-id');
     div.appendChild(existingHandlesLabel);
     document.getElementById('podurl-label').setAttribute('data-l10n-id', 'enter-new-id');
-    document.getElementById('podurl').setAttribute('placeholder', navigator.mozL10n.get('example-id')); 
     // Add previous handles to a list
     var ul = document.createElement('ul');
     for (var i = 0; i < window.localStorage.length; i++) {

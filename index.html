@@ -9,12 +9,12 @@
     <link href="design/icon.png" rel="apple-touch-icon">
     <link rel="localization" href="locales/{locale}.properties" />
     <link rel="manifest" href="./manifest.webapp" />
-    <script type="application/javascript" src="webL10n/l10n.js" charset="utf-8"></script>
+    <script type="application/javascript" src="lib/l10n.js" charset="utf-8"></script>
   </head>
   <body>
     <header>
       <a id="installLink" href="https://marketplace.firefox.com/app/diaspora/">
-        <img src="design/icon_market.png" alt="Marketplace" title="Go to the Firefox marketplace" />
+        <img data-l10n-id="marketplace" src="design/icon_market.png" alt="Marketplace" />
       </a>
       <h1>
         <a href="https://diasporafoundation.org">diaspora*</a>
@@ -26,16 +26,16 @@
       
       <form id="login-form">
         <ul id="newHandle">
-          <li><label id="podurl-label" for="podurl">Please enter your diaspora* ID:</label></li>
-          <li><input id="podurl" name="podurl" type="email" placeholder="username@yourpod.tld" /></li>
+          <li><label data-l10n-id="podurl-select" id="podurl-label" for="podurl"></label></li>
+          <li><input data-l10n-id="podurl" id="podurl" name="podurl" type="email" /></li>
           <li id="error" class="hidden"></li>
-          <li><button data-l10n-id="go-to-pod" id="submitButton" type="submit">Go to my pod!</button></li>
+          <li><button data-l10n-id="go-to-pod" id="submitButton" type="submit"></button></li>
         </ul>
       </form>
     </section>
     
     <footer>
-      <p><a data-l10n-id="create-account" href="https://wiki.diasporafoundation.org/Choosing_a_pod">Create an account</a></p>
+      <p><a data-l10n-id="create-account" href="https://wiki.diasporafoundation.org/Choosing_a_pod"></a></p>
     </footer>
     <script type="text/javascript" src="script.js"></script>
   </body>
