@@ -14,7 +14,6 @@ function init() {
     existingHandlesLabel.setAttribute('data-l10n-id', 'select-id');
     div.appendChild(existingHandlesLabel);
     document.getElementById('podurl-label').setAttribute('data-l10n-id', 'enter-new-id');
-    document.getElementById('podurl').setAttribute('placeholder', navigator.mozL10n.get('example-id')); 
     // Add previous handles to a list
     var ul = document.createElement('ul');
     for (var i = 0; i < window.localStorage.length; i++) {
