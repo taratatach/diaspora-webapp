@@ -1,9 +1,16 @@
 diaspora* OpenWebApp
 ===============
 
-An Open Web Application for diaspora*, the free and decentralized social network. Once you installed this application with Firefox, you get a shortcut in your launcher which will redirect you to your pod.
+An Open Web Application for diaspora*, the free and decentralized social network.
 
-This application was created for Firefox OS but it can be used on every plateform because it's only open web technologies!
+Features:
+ * Remember your diaspora* IDs to quickly go to your pods
+ * Add diaspora* in the "share" menu of Firefox OS => you can quickly share text content such as link. Ability to share images is coming.
 
->Copyright 2013 Flaburgan ©
+This application was created for Firefox OS but it can be used on every platform because it's only open web technologies!
+
+>Copyright 2013-2014 Flaburgan ©
 >This application is available under the Mozilla Public License, version 2.0
+
+>Copyright 2010-2014 diaspora* foundation ©
+>diaspora* is available under the Affero Gnu Public License, version 3
