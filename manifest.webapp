@@ -27,6 +27,9 @@
         },
         "de": {
             "description": "Offene Web Anwendung für das Soziale Netzwerk diaspora*"
+        },
+        "nb": {
+          "description": "OpenWeb applikasjon for det sosiale nettverket diaspora*"
         }
     },
     "chrome": { "navigation": true },
