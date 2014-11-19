@@ -3,42 +3,56 @@ navigator.mozL10n.ready(init);
 
 function init() {
   document.getElementById('login-form').addEventListener('submit', submit, false);
-  
+
   if (window.localStorage.length > 0) {
-    var div = document.getElementById('previousHandles');
-    
-    // Modify indications
-    var existingHandlesLabel = document.createElement('p');
-    existingHandlesLabel.id = 'existing-handles-label';
-    existingHandlesLabel.setAttribute('data-l10n-id', 'select-id');
-    div.appendChild(existingHandlesLabel);
+    loadAndDisplayExistingDiasporaID(true);
+    // The label changes because the user can select an already used diaspora* ID or enter a new one
     document.getElementById('podurl-label').setAttribute('data-l10n-id', 'enter-new-id');
-    // Add previous handles to a list
-    var ul = document.createElement('ul');
-    for (var i = 0; i < window.localStorage.length; i++) {
-      var handle = window.localStorage.key(i);
-      var li = document.createElement('li');
-      var linkToPod = document.createElement('a');
-      var removeIcon = document.createElement('img');
-      var removeString = 'Remove this diaspora* ID';
-      
-      linkToPod.setAttribute('href', getUrl(handle));
-      linkToPod.setAttribute('title', 'Go to my pod!');
-      linkToPod.appendChild(document.createTextNode(handle));
-      
-      removeIcon.setAttribute('src', './design/monotone_close_exit_delete.png');
-      removeIcon.setAttribute('alt', removeString);
-      removeIcon.setAttribute('title', removeString);
-      removeIcon.setAttribute('class', 'deleteHandle');
-      removeIcon.setAttribute('data-handle', handle);
-      removeIcon.addEventListener('click', deleteHandle, false);
-      
-      li.appendChild(removeIcon);
-      li.appendChild(linkToPod);
-      ul.appendChild(li);
-    }
-    div.appendChild(ul);
   }
+}
+
+function loadAndDisplayExistingDiasporaID(withRemoveIcons){
+  var div = document.getElementById('previousHandles');
+
+  // Modify indications
+  var existingHandlesLabel = document.createElement('p');
+  existingHandlesLabel.id = 'existing-handles-label';
+  existingHandlesLabel.setAttribute('data-l10n-id', 'select-id');
+  div.appendChild(existingHandlesLabel);
+
+  // Add previous handles to a list
+  var ul = document.createElement('ul');  
+  for (var i = 0; i < window.localStorage.length; i++) {
+    var handle = window.localStorage.key(i);
+    var li = document.createElement('li');
+    var linkToPod = document.createElement('a');
+    
+    linkToPod.setAttribute('href', getUrl(handle));
+    linkToPod.setAttribute('title', 'Go to my pod!');
+    linkToPod.appendChild(document.createTextNode(handle));
+    
+    if (withRemoveIcons) {
+      li.appendChild(createRemoveIcon(handle));
+    }
+    
+    li.appendChild(linkToPod);
+    ul.appendChild(li);
+  }
+  div.appendChild(ul);
+}
+
+function createRemoveIcon(diasporaID) {
+  var removeIcon = document.createElement('img');
+  var removeString = 'Remove this diaspora* ID'; //TODO translate this string
+  
+  removeIcon.setAttribute('src', './design/monotone_close_exit_delete.png');
+  removeIcon.setAttribute('alt', removeString);
+  removeIcon.setAttribute('title', removeString);
+  removeIcon.setAttribute('class', 'deleteHandle');
+  removeIcon.setAttribute('data-handle', diasporaID);
+  removeIcon.addEventListener('click', deleteHandle, false);
+  
+  return removeIcon;
 }
 
 function submit(e) {
