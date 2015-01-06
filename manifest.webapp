@@ -16,32 +16,37 @@
     },
     "installs_allowed_from": ["*"],
     "locales": {
-        "en": {
-            "description": "OpenWeb Application for the diaspora* social network"
+        "de": {
+            "name": "diaspora*",
+            "description": "Offene Web Anwendung für das Soziale Netzwerk diaspora*"
+        },
+        "eo": {
+            "name": "diaspora*",
+            "description": "Libera retaplikaĵo por la socia retejo diaspora*"
         },
         "fr": {
+            "name": "diaspora*",
             "description": "Application web ouverte pour le réseau social diaspora*"
         },
         "it": {
+            "name": "diaspora*",
             "description": "Applicazione OpenWeb per il social network diaspora*"
         },
-        "de": {
-            "description": "Offene Web Anwendung für das Soziale Netzwerk diaspora*"
-        },
         "nb": {
-          "description": "OpenWeb applikasjon for det sosiale nettverket diaspora*"
+            "name": "diaspora*",
+            "description": "OpenWeb applikasjon for det sosiale nettverket diaspora*"
         }
     },
     "chrome": { "navigation": true },
     "default_locale": "en",
     "activities": {
 	"share": {
-	    "filters": {
-		"type": [ "url" ]
-	    },
-	    "href": "/diaspora-webapp/share.html",
-	    "disposition": "window",
-	    "returnValue": false
-	}
+        "filters": {
+		    "type": [ "url" ]
+        },
+        "href": "/diaspora-webapp/share.html",
+        "disposition": "window",
+        "returnValue": false
+        }
     }
 }
