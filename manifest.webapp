@@ -1,5 +1,5 @@
 {
-  "version": "0.5",
+  "version": "0.6",
   "name": "diaspora*",
   "description": "OpenWeb Application for the diaspora* social network",
   "launch_path": "/diaspora-webapp/index.html",
