@@ -16,6 +16,10 @@
   },
   "installs_allowed_from": ["*"],
   "locales": {
+    "en": {
+      "name": "diaspora*",
+      "description": "OpenWeb Application for the diaspora* social network"
+    },
     "de": {
       "name": "diaspora*",
       "description": "Offene Web Anwendung für das Soziale Netzwerk diaspora*"
