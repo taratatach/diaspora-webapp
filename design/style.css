@@ -5,6 +5,11 @@ body {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
+a,
+a:visited {
+  color: black;
+}
+
 header {
   background: url("header-bg-long.jpg") rgb(40,35,35);
   box-shadow: 0 1px 2px #333333;
@@ -23,14 +28,9 @@ header h1 a:visited {
   text-decoration: none;
 }
 
-#content {
+#content,
+footer {
   margin: 0px 5%;
-}
-
-#installLink {
-  float: right;
-  margin-top: 8px;
-  cursor: pointer;
 }
 
 ul {
@@ -48,7 +48,8 @@ li {
   font-weight: 500;
 }
 
-input, button {
+input,
+button {
   padding: 0px;
   padding-left: 0.5rem;
   font-size: 1.4rem;
@@ -92,13 +93,22 @@ button {
   cursor: pointer;
 }
 
+.noAccount,
 footer {
-  padding-top: 0.3rem;
-  text-align: center;  
+  padding-top: 0.4rem;
+  text-align: center;
 }
 
-footer a, footer a:visited {
+footer,
+footer a,
+footer a:visited {
   color: #999999;
+  font-size: 0.9rem;
+}
+
+a:hover,
+footer a:hover {
+  color: #666666;
 }
 
 #error { color: red; }
