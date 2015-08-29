@@ -61,7 +61,7 @@ function submit(e) {
 
 function getUrl(handle) {
     var splitted = handle.split('@');
-    return 'https://' + splitted[1] + '/users/sign_in?user[username]=' + splitted[0];
+    return 'https://' + splitted[1] + '/users/sign_in.mobile?user[username]=' + splitted[0];
 }
 
 function deleteHandle(event) {
